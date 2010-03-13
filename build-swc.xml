@@ -1,0 +1,38 @@
+<!--
+ To build as3oauth.swc, use
+
+   compc -load-config=build-swc.xml
+   acompc -load-config=build-swc.xml
+
+ That is all.
+      <path-element>${flexlib}/libs/player/10/playerglobal.swc</path-element>
+-->
+<flex-config>
+  <target-player>10.0.0</target-player>
+  <compiler>
+    <external-library-path>
+      <path-element>${flexlib}/libs/player/10/playerglobal.swc</path-element>
+      <path-element>lib/corelib-20070830.swc</path-element>
+    </external-library-path>
+    <source-path>
+      <path-element>src</path-element>
+    </source-path>
+  </compiler>
+  <include-classes>
+      <class>org.coderepos.webservices.google.translate.LanguageType</class>
+      <class>org.coderepos.webservices.google.translate.GoogleTranslator</class>
+      <class>org.coderepos.webservices.google.translate.GoogleDetector</class>
+      <class>org.coderepos.webservices.google.translate.GoogleTranslateEndpoint</class>
+      <class>org.coderepos.webservices.google.translate.events.GoogleTranslateEvent</class>
+      <class>org.coderepos.webservices.google.translate.events.GoogleTranslateErrorEvent</class>
+      <class>org.coderepos.webservices.google.translate.events.GoogleDetectEvent</class>
+  </include-classes>
+  <metadata>
+    <creator>Lyo Kato</creator>
+    <description>http://github.com/lyokato/as3googletranslate.git</description>
+    <language>EN</language>
+    <title>AS3 Google Translate Client Library</title>
+  </metadata>
+  <output>bin/as3googletranslate-1_0_0.swc</output>
+</flex-config>
+
